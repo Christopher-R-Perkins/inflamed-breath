@@ -12,3 +12,9 @@ Mini Jam 160:
 The jam started at 12 AM EDT 6/7 and ended on 6/10 at 12 AM EDT. I started work at ~12 PM EDT 6/7.
 
 You can find my Design Document [here](./design-doc/README.md).
+
+## Assets Used
+
+- [Adve](https://egordorichev.itch.io/adve) by [egordorichev](https://egordorichev.itch.io/)
+- [Chare](https://egordorichev.itch.io/chare) also by [egordorichev](https://egordorichev.itch.io/)
+  - Modified 1 sprite from this
