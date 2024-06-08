@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://ofe8ocawuyd5" path="res://assets/tiles.png" id="1_b31u1"]
 [ext_resource type="PackedScene" uid="uid://c505hpkvfrqmn" path="res://scenes/evy.tscn" id="2_xyl8x"]
+[ext_resource type="PackedScene" uid="uid://b2todrbotvvsa" path="res://scenes/torch.tscn" id="3_u78an"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_c2vbb"]
 texture = ExtResource("1_b31u1")
@@ -329,9 +330,6 @@ physics_layer_0/collision_layer = 128
 physics_layer_0/collision_mask = 128
 sources/0 = SubResource("TileSetAtlasSource_c2vbb")
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_jagn0"]
-size = Vector2(3, 8)
-
 [node name="test_level" type="Node2D"]
 
 [node name="Camera2D" type="Camera2D" parent="."]
@@ -345,16 +343,5 @@ tile_set = SubResource("TileSet_b1gx8")
 z_index = 2
 position = Vector2(26, 129)
 
-[node name="Flamable" type="StaticBody2D" parent="."]
-position = Vector2(117, 124)
-collision_layer = 64
-collision_mask = 0
-
-[node name="Sprite2D" type="Sprite2D" parent="Flamable"]
-texture = ExtResource("1_b31u1")
-region_enabled = true
-region_rect = Rect2(152, 104, 8, 8)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Flamable"]
-position = Vector2(-0.5, 0)
-shape = SubResource("RectangleShape2D_jagn0")
+[node name="Torch" parent="." instance=ExtResource("3_u78an")]
+position = Vector2(112, 124)

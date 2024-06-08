@@ -1,0 +1,55 @@
+[gd_scene load_steps=8 format=3 uid="uid://b2todrbotvvsa"]
+
+[ext_resource type="PackedScene" uid="uid://cfpiam64w4pmo" path="res://scenes/flamable.tscn" id="2_3a7jv"]
+[ext_resource type="Texture2D" uid="uid://ofe8ocawuyd5" path="res://assets/tiles.png" id="2_lo0sc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d17b1"]
+size = Vector2(5, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2rcal"]
+atlas = ExtResource("2_lo0sc")
+region = Rect2(152, 96, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wl8bo"]
+atlas = ExtResource("2_lo0sc")
+region = Rect2(152, 88, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_17noj"]
+atlas = ExtResource("2_lo0sc")
+region = Rect2(152, 104, 8, 8)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_olrq0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2rcal")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wl8bo")
+}],
+"loop": true,
+"name": &"aflame",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_17noj")
+}],
+"loop": false,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[node name="Torch" type="Node2D"]
+
+[node name="Flamable" parent="." instance=ExtResource("2_3a7jv")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Flamable"]
+position = Vector2(-0.5, 0)
+shape = SubResource("RectangleShape2D_d17b1")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Flamable"]
+sprite_frames = SubResource("SpriteFrames_olrq0")
+animation = &"aflame"
+autoplay = "idle"
+frame_progress = 0.639706

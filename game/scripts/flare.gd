@@ -51,6 +51,9 @@ func _process(delta: float) -> void:
 		var result = space_state.intersect_ray(query)
 		
 		if result:
+			var collider = result.collider
+			if collider.has_method('alight'):
+				collider.alight()
 			return acc + [global_position - result.position]
 		else:
 			return acc

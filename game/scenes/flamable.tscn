@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://cfpiam64w4pmo"]
+
+[ext_resource type="Script" path="res://scripts/flamable.gd" id="1_wj5bc"]
+[ext_resource type="Texture2D" uid="uid://te6v304u7t35" path="res://assets/light.png" id="2_lqkg4"]
+
+[node name="Flamable" type="StaticBody2D"]
+collision_layer = 64
+collision_mask = 0
+script = ExtResource("1_wj5bc")
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+visible = false
+color = Color(0.960771, 0.98339, 0.743871, 1)
+energy = 2.0
+texture = ExtResource("2_lqkg4")
+texture_scale = 0.2

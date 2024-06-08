@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_be4ky"]
 [ext_resource type="Texture2D" uid="uid://dnh02iwp7et88" path="res://assets/evy.png" id="1_qhqr0"]
 [ext_resource type="Texture2D" uid="uid://te6v304u7t35" path="res://assets/light.png" id="3_0hf6l"]
-[ext_resource type="Script" path="res://scenes/flare.gd" id="3_ua3nx"]
+[ext_resource type="Script" path="res://scripts/flare.gd" id="3_md8f7"]
 [ext_resource type="Texture2D" uid="uid://821dqx18ystm" path="res://assets/explosions.png" id="5_jvaeq"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_i2grl"]
@@ -162,7 +162,7 @@ autoplay = "idle"
 shape = SubResource("CircleShape2D_2eb0a")
 
 [node name="Flare" type="Node2D" parent="."]
-script = ExtResource("3_ua3nx")
+script = ExtResource("3_md8f7")
 mask = 192
 
 [node name="PointLight2D" type="PointLight2D" parent="Flare"]
