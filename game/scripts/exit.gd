@@ -7,7 +7,7 @@ var locked = true
 
 func _ready() -> void:
 	var flamable = get_tree().get_nodes_in_group('Flamable Objects')
-	totalNeeded = flamable.filter(func(object): object.required).size()
+	totalNeeded = flamable.filter(func(object): return object.required).size()
 	
 	animated_sprite.play('locked')
 	EventBus.connect('brazier_lit', _brazier_lit)

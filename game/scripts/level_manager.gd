@@ -5,6 +5,7 @@ const levels = [
 	"res://scenes/level_1.tscn", 
 	"res://scenes/level_2.tscn", 
 	"res://scenes/level_3.tscn",
+	"res://scenes/level_4.tscn",
 ]
 
 var current_level = 1

@@ -5,8 +5,11 @@ extends Control
 @onready var oxygen_bar = $ColorRect
 const BAR_MAX_Y = 96
 const HUE_MAX = 0.333
-var enabled = true
 
+enum DIM_STATE { Ablaze, Dim, Dark, Out }
+
+var state = DIM_STATE.Ablaze
+var enabled = true
 var current_oxygen = 100
 
 func _ready() -> void:
@@ -26,6 +29,15 @@ func _oxygen_used(amount):
 	oxygen_bar.size.y = int(percent * BAR_MAX_Y)
 	oxygen_bar.color.h = percent * HUE_MAX
 	
+	if state == DIM_STATE.Ablaze && percent <= .6:
+		EventBus.dim.emit(.6)
+		state = DIM_STATE.Dim
+	elif state == DIM_STATE.Dim && percent <= .3:
+		EventBus.dim.emit(.3)
+		state = DIM_STATE.Dark
+	elif state == DIM_STATE.Dark && percent <= .1:
+		EventBus.dim.emit(.1)
+		state = DIM_STATE.Out
 
 func disable():
 	enabled = false
