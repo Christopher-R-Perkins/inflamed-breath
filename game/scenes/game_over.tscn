@@ -1,0 +1,46 @@
+[gd_scene load_steps=4 format=3 uid="uid://deoyimu7afgqa"]
+
+[ext_resource type="Script" path="res://scripts/level_overlay.gd" id="1_13grj"]
+[ext_resource type="FontFile" uid="uid://cn4ttr11w4880" path="res://assets/monogram-extended.ttf" id="2_vpsyg"]
+[ext_resource type="FontFile" uid="uid://d4i0a5e7ht7c5" path="res://assets/monogram-extended-italic.ttf" id="3_y3jds"]
+
+[node name="GameOver" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_13grj")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 73.0
+offset_top = 31.0
+offset_right = 219.0
+offset_bottom = 60.0
+theme_override_fonts/normal_font = ExtResource("2_vpsyg")
+theme_override_font_sizes/normal_font_size = 32
+text = "Level Failed"
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 79.0
+offset_top = 56.0
+offset_right = 207.0
+offset_bottom = 76.0
+theme_override_fonts/normal_font = ExtResource("2_vpsyg")
+theme_override_fonts/italics_font = ExtResource("3_y3jds")
+theme_override_font_sizes/italics_font_size = 16
+theme_override_font_sizes/normal_font_size = 16
+bbcode_enabled = true
+text = "[i]Evy ran out of Oxygen[/i]"
+
+[node name="RichTextLabel3" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 86.0
+offset_top = 94.0
+offset_right = 202.0
+offset_bottom = 110.0
+theme_override_fonts/normal_font = ExtResource("2_vpsyg")
+theme_override_fonts/italics_font = ExtResource("3_y3jds")
+theme_override_font_sizes/italics_font_size = 16
+theme_override_font_sizes/normal_font_size = 16
+bbcode_enabled = true
+text = "Press [i]'r'[/i] to reset!"

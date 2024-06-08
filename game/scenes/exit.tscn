@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://d1gmgnxx04oc4"]
 
-[ext_resource type="Script" path="res://scenes/exit.gd" id="1_3moav"]
+[ext_resource type="Script" path="res://scripts/exit.gd" id="1_3moav"]
 [ext_resource type="Texture2D" uid="uid://ofe8ocawuyd5" path="res://assets/tiles.png" id="2_hg7od"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_labos"]
@@ -34,7 +34,6 @@ animations = [{
 }]
 
 [node name="Exit" type="Node2D"]
-position = Vector2(221, 128)
 script = ExtResource("1_3moav")
 
 [node name="Area2D" type="Area2D" parent="."]
@@ -50,5 +49,4 @@ sprite_frames = SubResource("SpriteFrames_2ar7q")
 animation = &"unlocked"
 autoplay = "locked"
 
-[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
