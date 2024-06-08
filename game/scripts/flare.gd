@@ -13,6 +13,7 @@ const RAY_CASTS = [
 	Vector2(.707, -.707),
 ]
 const BLAST_RADIUS = 12
+const OXYGEN_USED_PER_BLAST = 5
 
 signal boosted(direction)
 @onready var animator = $AnimationPlayer
@@ -27,6 +28,7 @@ func fire():
 	if state == Flare_State.FIRING:
 		return
 	
+	EventBus.oxygen_used.emit(OXYGEN_USED_PER_BLAST)
 	animator.play('fire')
 	checks = 0
 	checkTime = 0

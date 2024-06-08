@@ -1,10 +1,11 @@
-[gd_scene load_steps=19 format=3 uid="uid://c505hpkvfrqmn"]
+[gd_scene load_steps=20 format=3 uid="uid://c505hpkvfrqmn"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_be4ky"]
 [ext_resource type="Texture2D" uid="uid://dnh02iwp7et88" path="res://assets/evy.png" id="1_qhqr0"]
 [ext_resource type="Texture2D" uid="uid://te6v304u7t35" path="res://assets/light.png" id="3_0hf6l"]
 [ext_resource type="Script" path="res://scripts/flare.gd" id="3_md8f7"]
 [ext_resource type="Texture2D" uid="uid://821dqx18ystm" path="res://assets/explosions.png" id="5_jvaeq"]
+[ext_resource type="Script" path="res://scripts/breather.gd" id="6_mn1y1"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_i2grl"]
 atlas = ExtResource("1_qhqr0")
@@ -181,5 +182,9 @@ region_rect = Rect2(160, 32, 32, 32)
 libraries = {
 "": SubResource("AnimationLibrary_loxkx")
 }
+
+[node name="Breather" type="Node" parent="."]
+script = ExtResource("6_mn1y1")
+enabled = true
 
 [connection signal="boosted" from="Flare" to="." method="_on_flare_boosted"]

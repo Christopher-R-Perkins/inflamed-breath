@@ -1,7 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://b2todrbotvvsa"]
+[gd_scene load_steps=9 format=3 uid="uid://b2todrbotvvsa"]
 
 [ext_resource type="PackedScene" uid="uid://cfpiam64w4pmo" path="res://scenes/flamable.tscn" id="2_3a7jv"]
 [ext_resource type="Texture2D" uid="uid://ofe8ocawuyd5" path="res://assets/tiles.png" id="2_lo0sc"]
+[ext_resource type="Script" path="res://scripts/breather.gd" id="3_qqgje"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_d17b1"]
 size = Vector2(5, 8)
@@ -54,3 +55,6 @@ sprite_frames = SubResource("SpriteFrames_olrq0")
 animation = &"aflame"
 autoplay = "idle"
 frame_progress = 0.639706
+
+[node name="Breather" type="Node" parent="Flamable"]
+script = ExtResource("3_qqgje")

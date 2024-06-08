@@ -1,0 +1,54 @@
+[gd_scene load_steps=7 format=3 uid="uid://d1gmgnxx04oc4"]
+
+[ext_resource type="Script" path="res://scenes/exit.gd" id="1_3moav"]
+[ext_resource type="Texture2D" uid="uid://ofe8ocawuyd5" path="res://assets/tiles.png" id="2_hg7od"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_labos"]
+size = Vector2(12, 9)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wwebm"]
+atlas = ExtResource("2_hg7od")
+region = Rect2(144, 128, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oxbso"]
+atlas = ExtResource("2_hg7od")
+region = Rect2(160, 128, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2ar7q"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wwebm")
+}],
+"loop": false,
+"name": &"locked",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oxbso")
+}],
+"loop": false,
+"name": &"unlocked",
+"speed": 5.0
+}]
+
+[node name="Exit" type="Node2D"]
+position = Vector2(221, 128)
+script = ExtResource("1_3moav")
+
+[node name="Area2D" type="Area2D" parent="."]
+disable_mode = 1
+collision_layer = 16
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, 3.5)
+shape = SubResource("RectangleShape2D_labos")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_2ar7q")
+animation = &"unlocked"
+autoplay = "locked"
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
