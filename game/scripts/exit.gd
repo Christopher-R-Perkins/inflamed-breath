@@ -19,6 +19,6 @@ func _brazier_lit():
 		locked = false
 		animated_sprite.play('unlocked')
 
-func _on_area_2d_body_entered(body: Node2D) -> void:
-	%LevelComplete.enable()
-	#EventBus.level_complete.emit()
+func _on_area_2d_body_entered(_body) -> void:
+	if !locked:
+		%LevelComplete.enable()

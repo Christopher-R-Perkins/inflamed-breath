@@ -1,12 +1,18 @@
 extends Node
 
-const levels = ["res://scenes/test_level.tscn", "res://scenes/level_2.tscn"]
+const levels = [
+	"res://scenese/test_level.tscn", 
+	"res://scenes/level_1.tscn", 
+	"res://scenes/level_2.tscn", 
+	"res://scenes/level_3.tscn",
+]
 
-var current_level = 0
+var current_level = 1
 
-func _ready() -> void:
-	EventBus.connect('level_complete', _on_level_complete)
-
-func _on_level_complete():
+func complete():
 	current_level += 1
 	get_tree().change_scene_to_file(levels[current_level])
+
+func load_level(number: int) -> void:
+	current_level = number
+	get_tree().change_scene_to_file(levels[number])

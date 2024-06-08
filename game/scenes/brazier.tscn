@@ -1,0 +1,59 @@
+[gd_scene load_steps=9 format=3 uid="uid://ctlbdki06w1c5"]
+
+[ext_resource type="PackedScene" uid="uid://cfpiam64w4pmo" path="res://scenes/flamable.tscn" id="1_h0bnj"]
+[ext_resource type="Texture2D" uid="uid://c6dqgyxps6x60" path="res://assets/brazier.png" id="2_r61mr"]
+[ext_resource type="Script" path="res://scripts/breather.gd" id="3_qowwf"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gmrsp"]
+atlas = ExtResource("2_r61mr")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3ypiy"]
+atlas = ExtResource("2_r61mr")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xc557"]
+atlas = ExtResource("2_r61mr")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_djg72"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gmrsp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3ypiy")
+}],
+"loop": true,
+"name": &"aflame",
+"speed": 7.5
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xc557")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_xdgi2"]
+radius = 8.0
+
+[node name="Brazier" type="Node2D"]
+
+[node name="Flamable" parent="." instance=ExtResource("1_h0bnj")]
+required = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Flamable"]
+sprite_frames = SubResource("SpriteFrames_djg72")
+animation = &"aflame"
+autoplay = "idle"
+frame_progress = 0.916343
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Flamable"]
+shape = SubResource("CircleShape2D_xdgi2")
+
+[node name="Breather" type="Node" parent="Flamable"]
+script = ExtResource("3_qowwf")

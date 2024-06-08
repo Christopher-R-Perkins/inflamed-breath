@@ -13,7 +13,7 @@ const RAY_CASTS = [
 	Vector2(.707, -.707),
 ]
 const BLAST_RADIUS = 12
-const OXYGEN_USED_PER_BLAST = 5
+const OXYGEN_USED_PER_BLAST = 3
 const MAX_CHECKS = 4
 
 signal boosted(direction)
@@ -29,10 +29,10 @@ func fire():
 	if state == Flare_State.FIRING:
 		return
 	
-	EventBus.oxygen_used.emit(OXYGEN_USED_PER_BLAST)
 	animator.play('fire')
 	checks = 0
 	checkTime = 0
+	EventBus.oxygen_used.emit(OXYGEN_USED_PER_BLAST)
 	
 	
 func _process(delta: float) -> void:
@@ -57,7 +57,7 @@ func _process(delta: float) -> void:
 			var collider = result.collider
 			if collider.has_method('alight'):
 				collider.alight()
-			return acc + [global_position - result.position]
+			return acc + [global_position - collider.global_position]
 		else:
 			return acc
 		
@@ -75,4 +75,4 @@ func _process(delta: float) -> void:
 	
 	direction_of_blast = direction_of_blast.normalized()
 	
-	emit_signal('boosted', direction_of_blast)
+	boosted.emit(direction_of_blast)
