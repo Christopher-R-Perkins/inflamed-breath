@@ -14,7 +14,7 @@ const RAY_CASTS = [
 ]
 const BLAST_RADIUS = 12
 
-signal boosted
+signal boosted(direction)
 @onready var animator = $AnimationPlayer
 
 enum Flare_State {IDLE, FIRING}

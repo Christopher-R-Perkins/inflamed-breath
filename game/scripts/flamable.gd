@@ -1,5 +1,7 @@
 extends StaticBody2D
 
+@export var required = false
+
 @onready var light = $PointLight2D
 var on_fire = false
 var animated_sprite = null
@@ -15,5 +17,9 @@ func _ready() -> void:
 func alight() -> void:
 	light.visible = true
 	collision_layer = 0
+	
 	if animated_sprite:
 		animated_sprite.play('aflame')
+	
+	if required:
+		EventBus.emit_signal('brazier_lit')
