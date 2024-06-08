@@ -14,6 +14,7 @@ const RAY_CASTS = [
 ]
 const BLAST_RADIUS = 12
 const OXYGEN_USED_PER_BLAST = 5
+const MAX_CHECKS = 4
 
 signal boosted(direction)
 @onready var animator = $AnimationPlayer
@@ -35,7 +36,7 @@ func fire():
 	
 	
 func _process(delta: float) -> void:
-	if state == Flare_State.IDLE || checks > 3:
+	if state == Flare_State.IDLE || checks >= MAX_CHECKS:
 		return
 		
 	checkTime -= delta
@@ -62,10 +63,16 @@ func _process(delta: float) -> void:
 		
 	var hits = RAY_CASTS.reduce(get_hits, [])
 	
-	var direction_of_blast = hits.reduce(func(acc, a): return acc + a, Vector2(0 , 0)).normalized()
-	if direction_of_blast.y > 0:
+	if hits.size() == 0:
 		return
 		
-	checks = 1000
+	
+	checks = MAX_CHECKS
+	
+	var direction_of_blast = hits.reduce(func(acc, a): return acc + a, Vector2(0 , 0))
+	if direction_of_blast.y > 0:
+		direction_of_blast.y = 0
+	
+	direction_of_blast = direction_of_blast.normalized()
 	
 	emit_signal('boosted', direction_of_blast)

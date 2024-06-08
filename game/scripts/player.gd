@@ -3,7 +3,7 @@ extends CharacterBody2D
 const DRAG = .1
 const SPEED = 75.0
 const JUMP_VELOCITY = -150.0
-const BOOST_VELOCITY = 300.0
+const BOOST_VELOCITY = 250.0
 
 @onready var animated_sprite = $AnimatedSprite2D
 @onready var flare = $Flare
@@ -14,7 +14,7 @@ func _physics_process(delta: float) -> void:
 	# Add the gravity.
 	if not is_on_floor():
 		velocity += get_gravity() * delta
-	elif boosted:
+	elif boosted && velocity.y >=0:
 		velocity = Vector2(0, 0)
 		boosted = false
 
@@ -53,7 +53,6 @@ func _on_flare_boosted(blast_direction) -> void:
 	if blast_direction == Vector2(0, 0):
 		return
 		
-	if not is_on_floor():
-		velocity = BOOST_VELOCITY * blast_direction
-		boosted = true
+	velocity = BOOST_VELOCITY * blast_direction
+	boosted = true
 	pass # Replace with function body.
