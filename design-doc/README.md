@@ -53,7 +53,8 @@ The game is developed to be released on the browser.
 
 - Godot
 - Asesprite
-- ?
+- FamiStudio
+- jsfxr
 
 ### Genre
 
@@ -98,7 +99,7 @@ The player controls Evy as she must navigate more and more complex single room d
 
 ## Art
 
-I will use a minimalist free tile pack. I havne't decided what yet.
+I will use a minimalist free tile pack + some pixel art made by me to match it
 
 ## Music
 
@@ -132,7 +133,7 @@ The UI will be very minimalistic. Likely just an O2 bar and the level number lis
 | 1   | Design Doc                    | Mostly Complete | 6/07/24   |                                                             |
 | 2   | Find environment Assets       | Complete        | 06/07/24  |                                                             |
 | 3   | Create Player Assets          | Complete        | 06/07/24  | Idle/Walk/Jump/Flare                                        |
-| 4   | Create flamable object assets | Incomplete      | 06/08/24  | Braziers + other objects lit/unlit                          |
+| 4   | Create flamable object assets | Complete        | 06/08/24  | Braziers + other objects lit/unlit                          |
 | 5   | Create UI assets              | Complete        | 06/09/24  | Bar + flourish                                              |
 | 6   | Create player scene           | Complete        | 06/07/24  | Make sure she moves correctly                               |
 | 7   | Create flamable Object Scene  | Complete        | 06/08/24  | Should collide with flare and set ablaze/send player flying |
@@ -140,7 +141,7 @@ The UI will be very minimalistic. Likely just an O2 bar and the level number lis
 | 9   | Create Oxygen Timer Scene     | Complete        | 06/08/24  |                                                             |
 | 10  | Create exit scene             | Complete        | 06/08/24  |                                                             |
 | 11  | Create Level Transitions      | Complete        | 06/08/24  | Disolve/fade in/out? - If I have time as a stretch          |
-| 12  | Particles                     | Not Started     | 06/09/24  | Make fire look good                                         |
+| 12  | Particles                     | Not Started     | 06/09/24  | Make fire look good \| stretch goal                         |
 | 13  | Sound Effects                 | Complete        | 06/09/24  | Find something for jump/flare/ open exit                    |
 | 14  | Music                         | Complete        | 06/09/24  |                                                             |
 | 15  | Level Design 1 - 5            | Complete        | 06/08/24  |                                                             |
