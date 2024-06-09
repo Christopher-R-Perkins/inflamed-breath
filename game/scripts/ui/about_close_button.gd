@@ -1,6 +1,9 @@
 extends Button
 
+@export var focus_button: Button
+@export var parent_panel: Control
+
 func _pressed() -> void:
-	%About.visible = false
+	parent_panel.visible = false
 	%Buttons.visible = true
-	%AboutButton.grab_focus()
+	focus_button.grab_focus()

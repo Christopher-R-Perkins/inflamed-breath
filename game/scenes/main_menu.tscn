@@ -1,14 +1,16 @@
-[gd_scene load_steps=18 format=4 uid="uid://dbgpf1wbd81vt"]
+[gd_scene load_steps=20 format=4 uid="uid://dbgpf1wbd81vt"]
 
 [ext_resource type="FontFile" uid="uid://cn4ttr11w4880" path="res://assets/monogram-extended.ttf" id="1_cujt0"]
 [ext_resource type="TileSet" uid="uid://dw08wlc5mad3l" path="res://assets/tilemap.tres" id="1_s5cuc"]
 [ext_resource type="Texture2D" uid="uid://dnh02iwp7et88" path="res://assets/evy.png" id="2_qc5la"]
 [ext_resource type="Script" path="res://scripts/ui/play_button.gd" id="4_71e64"]
+[ext_resource type="Script" path="res://scripts/ui/options_button.gd" id="5_6gtm4"]
 [ext_resource type="Script" path="res://scripts/ui/about_button.gd" id="5_8ln8h"]
 [ext_resource type="Script" path="res://scripts/ui/about_dialog.gd" id="5_w0ry3"]
 [ext_resource type="Script" path="res://scripts/ui/about_close_button.gd" id="7_i432v"]
 [ext_resource type="Script" path="res://scripts/ui/about_text.gd" id="8_nroe8"]
 [ext_resource type="AudioStream" uid="uid://c04pli60tfr7s" path="res://assets/music/menu.wav" id="9_rx45i"]
+[ext_resource type="Script" path="res://scripts/ui/options_dialog.gd" id="10_ud1d7"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_t41qh"]
 atlas = ExtResource("2_qc5la")
@@ -114,9 +116,9 @@ focus_neighbor_top = NodePath("../PlayButton")
 theme_override_fonts/font = ExtResource("1_cujt0")
 theme_override_font_sizes/font_size = 16
 text = "Options"
+script = ExtResource("5_6gtm4")
 
 [node name="AboutButton" type="Button" parent="Buttons"]
-unique_name_in_owner = true
 layout_mode = 2
 focus_neighbor_top = NodePath("../OptionsButton")
 focus_neighbor_bottom = NodePath("../PlayButton")
@@ -128,6 +130,7 @@ script = ExtResource("5_8ln8h")
 
 [node name="About" type="Control" parent="."]
 unique_name_in_owner = true
+visible = false
 layout_mode = 3
 anchors_preset = 0
 offset_left = 1.0
@@ -143,7 +146,7 @@ offset_top = 1.0
 offset_right = 256.0
 offset_bottom = 93.0
 
-[node name="CloseButton" type="Button" parent="About"]
+[node name="CloseButton" type="Button" parent="About" node_paths=PackedStringArray("focus_button", "parent_panel")]
 layout_mode = 0
 offset_left = 239.0
 offset_top = 1.0
@@ -155,6 +158,8 @@ theme_override_font_sizes/font_size = 16
 shortcut = SubResource("Shortcut_vm3j1")
 text = "X"
 script = ExtResource("7_i432v")
+focus_button = NodePath("../../Buttons/AboutButton")
+parent_panel = NodePath("..")
 
 [node name="AboutText" type="RichTextLabel" parent="About"]
 layout_mode = 0
@@ -174,7 +179,121 @@ Made for [url=https://itch.io/jam/mini-jam-160-light]MiniJam 160: Light[/url]"
 autowrap_mode = 0
 script = ExtResource("8_nroe8")
 
+[node name="Options" type="Control" parent="."]
+unique_name_in_owner = true
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_top = 52.0
+offset_right = 256.0
+offset_bottom = 143.0
+script = ExtResource("10_ud1d7")
+
+[node name="PanelContainer" type="PanelContainer" parent="Options"]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 1.0
+offset_right = 256.0
+offset_bottom = 93.0
+
+[node name="Menu Title" type="Label" parent="Options"]
+layout_mode = 0
+offset_left = 78.0
+offset_top = 5.0
+offset_right = 156.0
+offset_bottom = 18.0
+theme_override_fonts/font = ExtResource("1_cujt0")
+text = "Sound Options"
+
+[node name="CloseButton" type="Button" parent="Options" node_paths=PackedStringArray("focus_button", "parent_panel")]
+layout_mode = 0
+offset_left = 239.0
+offset_top = 1.0
+offset_right = 253.0
+offset_bottom = 22.0
+focus_neighbor_top = NodePath("../SFXVolume")
+focus_neighbor_bottom = NodePath("../MasterVolume")
+focus_next = NodePath("../MasterVolume")
+focus_previous = NodePath("../SFXVolume")
+theme_override_fonts/font = ExtResource("1_cujt0")
+theme_override_font_sizes/font_size = 16
+shortcut = SubResource("Shortcut_vm3j1")
+text = "X"
+script = ExtResource("7_i432v")
+focus_button = NodePath("../../Buttons/OptionsButton")
+parent_panel = NodePath("..")
+
+[node name="MasterLabel" type="Label" parent="Options"]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 23.0
+offset_right = 39.0
+offset_bottom = 36.0
+theme_override_fonts/font = ExtResource("1_cujt0")
+text = "Master"
+
+[node name="MasterVolume" type="HSlider" parent="Options"]
+layout_mode = 0
+offset_left = 46.0
+offset_top = 23.0
+offset_right = 235.0
+offset_bottom = 39.0
+focus_neighbor_top = NodePath("../CloseButton")
+focus_neighbor_bottom = NodePath("../MusicVolume")
+focus_next = NodePath("../MusicVolume")
+focus_previous = NodePath("../CloseButton")
+max_value = 1.0
+step = 0.05
+value = 1.0
+
+[node name="MusicLabel" type="Label" parent="Options"]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 47.0
+offset_right = 39.0
+offset_bottom = 60.0
+theme_override_fonts/font = ExtResource("1_cujt0")
+text = "Music"
+
+[node name="MusicVolume" type="HSlider" parent="Options"]
+layout_mode = 0
+offset_left = 46.0
+offset_top = 47.0
+offset_right = 235.0
+offset_bottom = 63.0
+max_value = 1.0
+step = 0.05
+value = 1.0
+
+[node name="SFXLabel" type="Label" parent="Options"]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 69.0
+offset_right = 39.0
+offset_bottom = 82.0
+theme_override_fonts/font = ExtResource("1_cujt0")
+text = "SFX
+"
+
+[node name="SFXVolume" type="HSlider" parent="Options"]
+layout_mode = 0
+offset_left = 46.0
+offset_top = 69.0
+offset_right = 235.0
+offset_bottom = 85.0
+focus_neighbor_top = NodePath("../MusicVolume")
+focus_neighbor_bottom = NodePath("../CloseButton")
+focus_next = NodePath("../CloseButton")
+focus_previous = NodePath("../MusicVolume")
+max_value = 1.0
+step = 0.05
+value = 1.0
+
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("9_rx45i")
 autoplay = true
 bus = &"Music"
+
+[connection signal="value_changed" from="Options/MasterVolume" to="Options" method="_on_master_volume_value_changed"]
+[connection signal="value_changed" from="Options/MusicVolume" to="Options" method="_on_music_volume_value_changed"]
+[connection signal="value_changed" from="Options/SFXVolume" to="Options" method="_on_sfx_volume_value_changed"]
