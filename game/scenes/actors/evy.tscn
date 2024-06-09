@@ -195,7 +195,6 @@ enabled = true
 
 [node name="JumpSound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("7_tw3xg")
-volume_db = -5.0
 bus = &"SFX"
 
 [connection signal="boosted" from="Flare" to="." method="_on_flare_boosted"]
