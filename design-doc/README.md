@@ -139,11 +139,11 @@ The UI will be very minimalistic. Likely just an O2 bar and the level number lis
 | 8   | Create brazier scene          | Complete        | 06/08/24  | Should count towards exit \| Just a flag on flammable       |
 | 9   | Create Oxygen Timer Scene     | Complete        | 06/08/24  |                                                             |
 | 10  | Create exit scene             | Complete        | 06/08/24  |                                                             |
-| 11  | Create Level Transitions      | Incomplete      | 06/08/24  | Disolve in/out?                                             |
+| 11  | Create Level Transitions      | Complete        | 06/08/24  | Disolve/fade in/out? - If I have time as a stretch          |
 | 12  | Particles                     | Not Started     | 06/09/24  | Make fire look good                                         |
-| 13  | Sound Effects                 | Not Started     | 06/09/24  | Find something for jump/flare/ open exit                    |
-| 14  | Music                         | Not Started     | 06/09/24  |                                                             |
-| 15  | Level Design 1 - 5            | Not Started     | 06/08/24  |                                                             |
+| 13  | Sound Effects                 | Complete        | 06/09/24  | Find something for jump/flare/ open exit                    |
+| 14  | Music                         | Complete        | 06/09/24  |                                                             |
+| 15  | Level Design 1 - 5            | Complete        | 06/08/24  |                                                             |
 | 16  | Level Design 6 - 10           | Not Started     | 06/09/24  |                                                             |
-| 17  | Main Menu/Splash              | Not Started     | 06/09/24  |                                                             |
+| 17  | Main Menu/Splash              | In Progress     | 06/09/24  |                                                             |
 | 18  | SUBMIT                        | Not Started     | 06/09/24  |                                                             |
