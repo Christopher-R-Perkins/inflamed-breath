@@ -1,12 +1,12 @@
 extends Node
 
 const levels = [
-	"res://scenese/test_level.tscn", 
-	"res://scenes/level_1.tscn", 
-	"res://scenes/level_2.tscn", 
-	"res://scenes/level_3.tscn",
-	"res://scenes/level_4.tscn",
-	"res://scenes/level_5.tscn",
+	"res://scenese/levels/test_level.tscn", 
+	"res://scenes/levels/level_1.tscn", 
+	"res://scenes/levels/level_2.tscn", 
+	"res://scenes/levels/level_3.tscn",
+	"res://scenes/levels/level_4.tscn",
+	"res://scenes/levels/level_5.tscn",
 ]
 
 var current_level = 1
