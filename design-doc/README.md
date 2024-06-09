@@ -128,23 +128,23 @@ The UI will be very minimalistic. Likely just an O2 bar and the level number lis
 
 ### MVP
 
-| #   | Assignment                    | Status          | Finish By | Notes                                                       |
-| --- | ----------------------------- | --------------- | --------- | ----------------------------------------------------------- |
-| 1   | Design Doc                    | Mostly Complete | 6/07/24   |                                                             |
-| 2   | Find environment Assets       | Complete        | 06/07/24  |                                                             |
-| 3   | Create Player Assets          | Complete        | 06/07/24  | Idle/Walk/Jump/Flare                                        |
-| 4   | Create flamable object assets | Complete        | 06/08/24  | Braziers + other objects lit/unlit                          |
-| 5   | Create UI assets              | Complete        | 06/09/24  | Bar + flourish                                              |
-| 6   | Create player scene           | Complete        | 06/07/24  | Make sure she moves correctly                               |
-| 7   | Create flamable Object Scene  | Complete        | 06/08/24  | Should collide with flare and set ablaze/send player flying |
-| 8   | Create brazier scene          | Complete        | 06/08/24  | Should count towards exit \| Just a flag on flammable       |
-| 9   | Create Oxygen Timer Scene     | Complete        | 06/08/24  |                                                             |
-| 10  | Create exit scene             | Complete        | 06/08/24  |                                                             |
-| 11  | Create Level Transitions      | Complete        | 06/08/24  | Disolve/fade in/out? - If I have time as a stretch          |
-| 12  | Particles                     | Not Started     | 06/09/24  | Make fire look good \| stretch goal                         |
-| 13  | Sound Effects                 | Complete        | 06/09/24  | Find something for jump/flare/ open exit                    |
-| 14  | Music                         | Complete        | 06/09/24  |                                                             |
-| 15  | Level Design 1 - 5            | Complete        | 06/08/24  |                                                             |
-| 16  | Level Design 6 - 10           | Not Started     | 06/09/24  |                                                             |
-| 17  | Main Menu/Splash              | In Progress     | 06/09/24  |                                                             |
-| 18  | SUBMIT                        | Not Started     | 06/09/24  |                                                             |
+| #   | Assignment                    | Status      | Finish By | Notes                                                       |
+| --- | ----------------------------- | ----------- | --------- | ----------------------------------------------------------- |
+| 1   | Design Doc                    | Complete    | 6/07/24   |                                                             |
+| 2   | Find environment Assets       | Complete    | 06/07/24  |                                                             |
+| 3   | Create Player Assets          | Complete    | 06/07/24  | Idle/Walk/Jump/Flare                                        |
+| 4   | Create flamable object assets | Complete    | 06/08/24  | Braziers + other objects lit/unlit                          |
+| 5   | Create UI assets              | Complete    | 06/09/24  | Bar + flourish                                              |
+| 6   | Create player scene           | Complete    | 06/07/24  | Make sure she moves correctly                               |
+| 7   | Create flamable Object Scene  | Complete    | 06/08/24  | Should collide with flare and set ablaze/send player flying |
+| 8   | Create brazier scene          | Complete    | 06/08/24  | Should count towards exit \| Just a flag on flammable       |
+| 9   | Create Oxygen Timer Scene     | Complete    | 06/08/24  |                                                             |
+| 10  | Create exit scene             | Complete    | 06/08/24  |                                                             |
+| 11  | Create Level Transitions      | Complete    | 06/08/24  | Disolve/fade in/out? - If I have time as a stretch          |
+| 12  | Particles                     | Not Started | 06/09/24  | Make fire look good \| stretch goal                         |
+| 13  | Sound Effects                 | Complete    | 06/09/24  | Find something for jump/flare/ open exit                    |
+| 14  | Music                         | Complete    | 06/09/24  |                                                             |
+| 15  | Level Design 1 - 5            | Complete    | 06/08/24  |                                                             |
+| 16  | Level Design 6 - 10           | In Progress | 06/09/24  |                                                             |
+| 17  | Main Menu/Splash              | In Progress | 06/09/24  |                                                             |
+| 18  | SUBMIT                        | Not Started | 06/09/24  |                                                             |
