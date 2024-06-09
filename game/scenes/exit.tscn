@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://d1gmgnxx04oc4"]
 
-[ext_resource type="Script" path="res://scripts/exit.gd" id="1_3moav"]
+[ext_resource type="Script" path="res://scripts/gamplay/exit.gd" id="1_3moav"]
 [ext_resource type="Texture2D" uid="uid://ofe8ocawuyd5" path="res://assets/tiles.png" id="2_hg7od"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_labos"]

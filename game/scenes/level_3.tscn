@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=4 uid="uid://cms64t8cw0243"]
 
-[ext_resource type="Script" path="res://scripts/level.gd" id="1_2t23y"]
+[ext_resource type="Script" path="res://scripts/gamplay/level.gd" id="1_2t23y"]
 [ext_resource type="TileSet" uid="uid://dw08wlc5mad3l" path="res://assets/tilemap.tres" id="2_vxy4l"]
 [ext_resource type="PackedScene" uid="uid://b0peafqx8oinp" path="res://scenes/level_timer.tscn" id="3_qpbht"]
 [ext_resource type="PackedScene" uid="uid://c505hpkvfrqmn" path="res://scenes/evy.tscn" id="4_kqpfe"]

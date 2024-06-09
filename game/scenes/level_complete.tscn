@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://c6ljdu1orgywt"]
 
-[ext_resource type="Script" path="res://scripts/level_complete.gd" id="1_chsla"]
+[ext_resource type="Script" path="res://scripts/gamplay/level_complete.gd" id="1_chsla"]
 [ext_resource type="FontFile" uid="uid://cn4ttr11w4880" path="res://assets/monogram-extended.ttf" id="2_m4o5p"]
 [ext_resource type="FontFile" uid="uid://d4i0a5e7ht7c5" path="res://assets/monogram-extended-italic.ttf" id="3_nvs8j"]
 

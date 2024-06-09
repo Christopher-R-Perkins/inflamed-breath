@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://cfpiam64w4pmo"]
 
-[ext_resource type="Script" path="res://scripts/flamable.gd" id="1_wj5bc"]
+[ext_resource type="Script" path="res://scripts/gamplay/flamable.gd" id="1_wj5bc"]
 [ext_resource type="Texture2D" uid="uid://te6v304u7t35" path="res://assets/light.png" id="2_lqkg4"]
 
 [node name="Flamable" type="StaticBody2D" groups=["Flamable Objects"]]
