@@ -8,3 +8,6 @@ func _process(_delta: float) -> void:
 	
 	if can_continue:
 		LevelManager.complete()
+
+func enable() -> void:
+	super()

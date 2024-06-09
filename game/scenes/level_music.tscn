@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://b2ed8n2r7d2tl"]
+
+[ext_resource type="AudioStream" uid="uid://cv0uvtkc2apx5" path="res://assets/music/level.wav" id="1_2o27c"]
+
+[node name="LevelMusic" type="AudioStreamPlayer"]
+stream = ExtResource("1_2o27c")
+bus = &"Music"

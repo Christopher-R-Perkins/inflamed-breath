@@ -18,6 +18,7 @@ const MAX_CHECKS = 4
 
 signal boosted(direction)
 @onready var animator = $AnimationPlayer
+@onready var sfx = $FlareSound
 
 enum Flare_State {IDLE, FIRING}
 @export var state = Flare_State.IDLE
@@ -29,6 +30,7 @@ func fire():
 	if state == Flare_State.FIRING:
 		return
 	
+	sfx.play()
 	animator.play('fire')
 	checks = 0
 	checkTime = 0

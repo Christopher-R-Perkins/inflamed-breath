@@ -1,13 +1,14 @@
-[gd_scene load_steps=4 format=3 uid="uid://deoyimu7afgqa"]
+[gd_scene load_steps=5 format=3 uid="uid://deoyimu7afgqa"]
 
-[ext_resource type="Script" path="res://scripts/gamplay/level_overlay.gd" id="1_13grj"]
+[ext_resource type="Script" path="res://scripts/gamplay/game_over.gd" id="1_nljy5"]
 [ext_resource type="FontFile" uid="uid://cn4ttr11w4880" path="res://assets/monogram-extended.ttf" id="2_vpsyg"]
 [ext_resource type="FontFile" uid="uid://d4i0a5e7ht7c5" path="res://assets/monogram-extended-italic.ttf" id="3_y3jds"]
+[ext_resource type="AudioStream" uid="uid://cp3n66xfb8r5y" path="res://assets/sfx/lose.wav" id="4_hdjt1"]
 
 [node name="GameOver" type="Control"]
 layout_mode = 3
 anchors_preset = 0
-script = ExtResource("1_13grj")
+script = ExtResource("1_nljy5")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
 layout_mode = 0
@@ -44,3 +45,8 @@ theme_override_font_sizes/italics_font_size = 16
 theme_override_font_sizes/normal_font_size = 16
 bbcode_enabled = true
 text = "Press [i]'r'[/i] to reset!"
+
+[node name="LoseJingle" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_hdjt1")
+volume_db = 5.0
+bus = &"SFX"

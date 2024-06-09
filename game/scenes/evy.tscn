@@ -1,11 +1,13 @@
-[gd_scene load_steps=20 format=3 uid="uid://c505hpkvfrqmn"]
+[gd_scene load_steps=22 format=3 uid="uid://c505hpkvfrqmn"]
 
 [ext_resource type="Script" path="res://scripts/gamplay/player.gd" id="1_be4ky"]
 [ext_resource type="Texture2D" uid="uid://dnh02iwp7et88" path="res://assets/evy.png" id="1_qhqr0"]
 [ext_resource type="Texture2D" uid="uid://te6v304u7t35" path="res://assets/light.png" id="3_0hf6l"]
 [ext_resource type="Script" path="res://scripts/gamplay/flare.gd" id="3_md8f7"]
 [ext_resource type="Texture2D" uid="uid://821dqx18ystm" path="res://assets/explosions.png" id="5_jvaeq"]
+[ext_resource type="AudioStream" uid="uid://dg2fyu7j1j22l" path="res://assets/sfx/flare.wav" id="6_cn3md"]
 [ext_resource type="Script" path="res://scripts/gamplay/breather.gd" id="6_mn1y1"]
+[ext_resource type="AudioStream" uid="uid://cvy6wgy1st1vk" path="res://assets/sfx/jump.wav" id="7_tw3xg"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_i2grl"]
 atlas = ExtResource("1_qhqr0")
@@ -183,8 +185,17 @@ libraries = {
 "": SubResource("AnimationLibrary_loxkx")
 }
 
+[node name="FlareSound" type="AudioStreamPlayer" parent="Flare"]
+stream = ExtResource("6_cn3md")
+bus = &"SFX"
+
 [node name="Breather" type="Node" parent="."]
 script = ExtResource("6_mn1y1")
 enabled = true
+
+[node name="JumpSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_tw3xg")
+volume_db = -5.0
+bus = &"SFX"
 
 [connection signal="boosted" from="Flare" to="." method="_on_flare_boosted"]

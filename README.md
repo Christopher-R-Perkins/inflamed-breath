@@ -20,3 +20,4 @@ You can find my Design Document [here](./design-doc/README.md).
   - Modified 1 sprite from this to make Evy the player sprite
 - [Free Effect Bullet Impact Explosion 32x32](https://bdragon1727.itch.io/free-effect-bullet-impact-explosion-32x32) by [bdragon1727](https://itch.io/profile/bdragon1727)
 - [Monogram](https://datagoblin.itch.io/monogram) by [datagoblin](https://itch.io/profile/datagoblin)
+- [ChipSet - Chiptune Music Loops](https://ratticusvile.itch.io/chipset8bit) by [ratticusvile](https://ratticusvile.itch.io/)

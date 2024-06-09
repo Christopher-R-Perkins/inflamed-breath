@@ -1,6 +1,7 @@
 extends Node2D
 
 @onready var animated_sprite = $AnimatedSprite2D
+@onready var sfx = $DoorSfx
 
 var totalNeeded = 0
 var locked = true
@@ -17,6 +18,7 @@ func _brazier_lit():
 
 	if totalNeeded <= 0:
 		locked = false
+		sfx.play()
 		animated_sprite.play('unlocked')
 
 func _on_area_2d_body_entered(_body) -> void:

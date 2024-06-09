@@ -3,6 +3,7 @@ extends Control
 @export var total_oxygen = 100
 
 @onready var oxygen_bar = $ColorRect
+
 const BAR_MAX_Y = 96
 const HUE_MAX = 0.333
 
@@ -13,8 +14,9 @@ var enabled = true
 var current_oxygen = 100
 
 func _ready() -> void:
-	current_oxygen = total_oxygen
 	EventBus.connect('oxygen_used', _oxygen_used)
+	current_oxygen = total_oxygen - int(.1 * LevelManager.loop * total_oxygen)
+	_setBar(1 - .1 * LevelManager.loop)
 	
 func _oxygen_used(amount):
 	if !enabled:
@@ -26,8 +28,7 @@ func _oxygen_used(amount):
 		%GameOver.enable()
 	
 	var percent = (1.0 * current_oxygen) / total_oxygen
-	oxygen_bar.size.y = int(percent * BAR_MAX_Y)
-	oxygen_bar.color.h = percent * HUE_MAX
+	_setBar(percent)
 	
 	if state == DIM_STATE.Ablaze && percent <= .6:
 		EventBus.dim.emit(.6)
@@ -41,3 +42,7 @@ func _oxygen_used(amount):
 
 func disable():
 	enabled = false
+	
+func _setBar(percent: float) -> void:
+	oxygen_bar.size.y = int(percent * BAR_MAX_Y)
+	oxygen_bar.color.h = percent * HUE_MAX
