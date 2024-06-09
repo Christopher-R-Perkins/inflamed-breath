@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=3 uid="uid://ctlbdki06w1c5"]
 
-[ext_resource type="PackedScene" uid="uid://cfpiam64w4pmo" path="res://scenes/flamable.tscn" id="1_h0bnj"]
+[ext_resource type="PackedScene" uid="uid://cfpiam64w4pmo" path="res://scenes/actors/flamable.tscn" id="1_h0bnj"]
 [ext_resource type="Texture2D" uid="uid://c6dqgyxps6x60" path="res://assets/brazier.png" id="2_r61mr"]
 [ext_resource type="Script" path="res://scripts/gamplay/breather.gd" id="3_qowwf"]
 

@@ -2,13 +2,13 @@
 
 [ext_resource type="Texture2D" uid="uid://ofe8ocawuyd5" path="res://assets/tiles.png" id="1_b31u1"]
 [ext_resource type="Script" path="res://scripts/gamplay/level.gd" id="1_myoiu"]
-[ext_resource type="PackedScene" uid="uid://c505hpkvfrqmn" path="res://scenes/evy.tscn" id="2_xyl8x"]
-[ext_resource type="PackedScene" uid="uid://b2todrbotvvsa" path="res://scenes/torch.tscn" id="3_u78an"]
-[ext_resource type="PackedScene" uid="uid://d1gmgnxx04oc4" path="res://scenes/exit.tscn" id="4_h5v8u"]
+[ext_resource type="PackedScene" uid="uid://c505hpkvfrqmn" path="res://scenes/actors/evy.tscn" id="2_xyl8x"]
+[ext_resource type="PackedScene" uid="uid://b2todrbotvvsa" path="res://scenes/actors/torch.tscn" id="3_u78an"]
+[ext_resource type="PackedScene" uid="uid://d1gmgnxx04oc4" path="res://scenes/actors/exit.tscn" id="4_h5v8u"]
 [ext_resource type="PackedScene" uid="uid://b0peafqx8oinp" path="res://scenes/level_timer.tscn" id="5_7n06l"]
 [ext_resource type="PackedScene" uid="uid://deoyimu7afgqa" path="res://scenes/game_over.tscn" id="7_5h8kp"]
 [ext_resource type="PackedScene" uid="uid://c6ljdu1orgywt" path="res://scenes/level_complete.tscn" id="8_1asf4"]
-[ext_resource type="PackedScene" uid="uid://ctlbdki06w1c5" path="res://scenes/brazier.tscn" id="9_8v3bl"]
+[ext_resource type="PackedScene" uid="uid://ctlbdki06w1c5" path="res://scenes/actors/brazier.tscn" id="9_8v3bl"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_c2vbb"]
 texture = ExtResource("1_b31u1")
