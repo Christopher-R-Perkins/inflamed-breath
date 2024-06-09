@@ -35,8 +35,7 @@ func fire():
 	checks = 0
 	checkTime = 0
 	EventBus.oxygen_used.emit(OXYGEN_USED_PER_BLAST)
-	
-	
+
 func _process(delta: float) -> void:
 	if state == Flare_State.IDLE || checks >= MAX_CHECKS:
 		return
@@ -67,7 +66,6 @@ func _process(delta: float) -> void:
 	
 	if hits.size() == 0:
 		return
-		
 	
 	checks = MAX_CHECKS
 	

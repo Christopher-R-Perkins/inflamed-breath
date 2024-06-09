@@ -9,8 +9,11 @@ signal burned()
 
 const MAX_ENERGY = 2.0
 
+var lit = true
+
 var breather = null
 var animated_sprite = null
+var on_fire = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -29,7 +32,13 @@ func _dim(percent: float) -> void:
 	light.energy = MAX_ENERGY * percent
 
 func alight() -> void:
-	light.visible = true
+	if on_fire:
+		return
+	
+	on_fire = true
+	if lit: 
+		light.visible = true
+	
 	collision_layer = 0
 		
 	if animated_sprite:
