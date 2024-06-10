@@ -145,6 +145,6 @@ The UI will be very minimalistic. Likely just an O2 bar and the level number lis
 | 13  | Sound Effects                 | Complete    | 06/09/24  | Find something for jump/flare/ open exit                    |
 | 14  | Music                         | Complete    | 06/09/24  |                                                             |
 | 15  | Level Design 1 - 5            | Complete    | 06/08/24  |                                                             |
-| 16  | Level Design 6 - 10           | In Progress | 06/09/24  |                                                             |
+| 16  | Level Design 6 - 10           | InComplete  | 06/09/24  | Nine Levels done                                            |
 | 17  | Main Menu/Splash              | Complete    | 06/09/24  |                                                             |
-| 18  | SUBMIT                        | Not Started | 06/09/24  |                                                             |
+| 18  | SUBMIT                        | Complete    | 06/09/24  | Submitted                                                   |

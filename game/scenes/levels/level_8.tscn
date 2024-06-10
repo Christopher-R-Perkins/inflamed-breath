@@ -11,8 +11,9 @@
 [ext_resource type="PackedScene" uid="uid://qmy4lb5spvon" path="res://scenes/actors/flamable_bridge.tscn" id="9_8vm41"]
 [ext_resource type="PackedScene" uid="uid://b2todrbotvvsa" path="res://scenes/actors/torch.tscn" id="10_xienw"]
 
-[node name="LevelTemplate" type="Node2D"]
+[node name="Level_8" type="Node2D"]
 script = ExtResource("1_q4qvo")
+number = 8
 
 [node name="Camera2D" type="Camera2D" parent="."]
 anchor_mode = 0

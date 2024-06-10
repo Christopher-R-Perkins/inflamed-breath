@@ -9,7 +9,7 @@ Mini Jam 160:
 - Theme: Light
 - Limitation: Speed is Key
 
-The jam started at 12 AM EDT 6/7 and ended on 6/10 at 12 AM EDT. I started work at ~12 PM EDT 6/7.
+The jam started at 12 AM EDT 6/7 and ended on 6/10 at 12 AM EDT. I started work at ~12 PM EDT 6/7 and Finished at 11 PM EDT 6/9.
 
 You can find my Design Document [here](./design-doc/README.md).
 
