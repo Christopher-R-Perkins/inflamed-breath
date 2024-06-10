@@ -1,3 +1,9 @@
 # Godot 4+ specific ignores
 .godot/
-assets/
+assets/music/level.wav
+assets/music/menu.wav
+assets/evy.png
+assets/explosions.png
+assets/monogram-extended-italic.ttf
+assets/monogram-extended.ttf
+assets/tiles.png
