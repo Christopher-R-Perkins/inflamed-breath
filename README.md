@@ -2,7 +2,7 @@
 
 ## Game Jam Entry
 
-This is the repository for Inflamed Breath, a game that was created for [Mini Jam 160: Light](https://itch.io/jam/mini-jam-160-light). [Mini Jam](https://minijamofficial.com/) is a game jame for independent game developers hosted every other week. It lasts 72 with new themes and limitiations each time.
+This is the repository for Inflamed Breath, a game that was created for [Mini Jam 160: Light](https://itch.io/jam/mini-jam-160-light). [Mini Jam](https://minijamofficial.com/) is a game jame for independent game developers hosted every other week. It lasts 72 with new themes and limitiations each time. Inflamed Breath was voted [4th overall](https://itch.io/jam/mini-jam-160-light/rate/2764078) out of 128 entries.
 
 Mini Jam 160:
 
